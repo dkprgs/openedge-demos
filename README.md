@@ -16,9 +16,9 @@ This demo provides sample code to demonstrate the Server Side Joins functionalit
 
 Demo of running the container sample application for PASOE. Infrastructure as Code (IaC) files provides support to run using Docker and Podman.
 
-## openedge-12.6.0
+## openedge-12.8.0
 
-This demo uses IaC with Vagrant to create a VM with OpenEdge 12.6 which then can be used to create a Vagrant box.
+This demo uses IaC with Vagrant to create a VM with OpenEdge 12.8 which then can be used to create a Vagrant box.
 
 ## loadmaster
 

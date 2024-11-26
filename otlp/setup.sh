@@ -9,31 +9,31 @@ fi
 
 export DEMO=`pwd`
 
-FILE=PROGRESS_OE_12.6_LNX_64.tar.gz
+FILE=PROGRESS_OE_12.8_LNX_64.tar.gz
 if [ ! -f /files/$FILE ]
 then
-  echo "Prerequisite: OpenEdge 12.6 media ($FILE) must be found in /files folder."
+  echo "Prerequisite: OpenEdge 12.8 media ($FILE) must be found in /files folder."
   exit
 fi
 
-FILE=response_12.6.ini
+FILE=response_12.8.ini
 if [ ! -f /files/$FILE ]
 then
-  echo "Prerequisite: OpenEdge 12.6 response.ini file ($FILE) must be found in /files folder."
+  echo "Prerequisite: OpenEdge 12.8 response.ini file ($FILE) must be found in /files folder."
   exit
 fi
 
-FILE=PROGRESS_OECC_SERVER_1.2.0_LNX_64.tar.gz
+FILE=PROGRESS_OECC_SERVER_1.3.0_LNX_64.tar.gz
 if [ ! -f /files/$FILE ]
 then
-  echo "Prerequisite: OpenEdge Command Center Server 1.2 .tar.gz file ($FILE) must be found in /files folder."
+  echo "Prerequisite: OpenEdge Command Center Server 1.3 .tar.gz file ($FILE) must be found in /files folder."
   exit
 fi
 
-FILE=PROGRESS_OECC_AGENT_1.2.0_LNX_64.bin
+FILE=PROGRESS_OECC_AGENT_1.3.0_LNX_64.bin
 if [ ! -f /files/$FILE ]
 then
-  echo "Prerequisite: OpenEdge Command Center Agent 1.2 .bin file ($FILE) must be found in /files folder."
+  echo "Prerequisite: OpenEdge Command Center Agent 1.3 .bin file ($FILE) must be found in /files folder."
   exit
 fi
 
@@ -53,9 +53,9 @@ else
   fi
 fi
 
-if [ ! -f docker/oecc/PROGRESS_OECC_SERVER_1.2.0_LNX_64.tar.gz ]
+if [ ! -f docker/oecc/PROGRESS_OECC_SERVER_1.3.0_LNX_64.tar.gz ]
 then
-  cp /files/PROGRESS_OECC_SERVER_1.2.0_LNX_64.tar.gz docker/oecc
+  cp /files/PROGRESS_OECC_SERVER_1.3.0_LNX_64.tar.gz docker/oecc
 fi
 
 for file in openedge.properties otagentoedb.yaml otagentpasoe.yaml
@@ -82,7 +82,7 @@ echo Running install_docker_compose.sh...
 echo Running install_openjdk.sh...
 ../scripts/install_openjdk.sh 17
 echo Running install_openedge.sh...
-../scripts/install_openedge.sh 12.6
+../scripts/install_openedge.sh 12.8
 echo Running create_sports2020.sh...
 ../scripts/create_sports2020.sh
 echo Running create_oepas1.sh...

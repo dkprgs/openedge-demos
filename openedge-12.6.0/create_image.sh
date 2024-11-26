@@ -3,7 +3,7 @@
 # set -x
 
 RESOURCE_GROUP=DemoResourceGroup
-NAME=OpenEdge-12.6.0
+NAME=OpenEdge-12.8.0
 TEMP=/tmp
 
 IP_ADDRESS=
@@ -86,13 +86,13 @@ then
 fi
 
 run_cmd "sudo mkdir -p /files; sudo chown azureuser /files"
-copy_files ~/clouddrive/PROGRESS_OE_12.6_LNX_64.tar.gz ~/clouddrive/response_12.6.ini
+copy_files ~/clouddrive/PROGRESS_OE_12.8_LNX_64.tar.gz ~/clouddrive/response_12.8.ini
 
 cd ../..
 tar czf ~/clouddrive/openedge-demos.tar.gz openedge-demos
 copy_files ~/clouddrive/openedge-demos.tar.gz
 
-run_cmd "tar xzf /files/openedge-demos.tar.gz; cd openedge-demos/openedge-12.6.0; sudo bash ./setup.sh"
+run_cmd "tar xzf /files/openedge-demos.tar.gz; cd openedge-demos/openedge-12.8.0; sudo bash ./setup.sh"
 
 run_cmd "cat /psc/dlc/version"
 
@@ -100,11 +100,11 @@ run_cmd "sudo waagent -deprovision+user -force"
 
 az vm deallocate \
   --resource-group $RESOURCE_GROUP \
-  --name OpenEdge-12.6.0 > $TEMP/output.json
+  --name OpenEdge-12.8.0 > $TEMP/output.json
 
 az vm generalize \
   --resource-group $RESOURCE_GROUP \
-  --name OpenEdge-12.6.0 > $TEMP/output.json
+  --name OpenEdge-12.8.0 > $TEMP/output.json
 
 az image create \
   --resource-group $RESOURCE_GROUP \

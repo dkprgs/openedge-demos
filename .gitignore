@@ -1,6 +1,6 @@
 loadmaster-demo1/.vagrant
 loadmaster-demo2/.vagrant
-openedge-12.6.0/.vagrant
-openedge-12.6.0/package.box
+openedge-12.8.0/.vagrant
+openedge-12.8.0/package.box
 otlp/.vagrant
-otlp/docker/oecc/PROGRESS_OECC_SERVER_1.2.0_LNX_64.tar.gz
+otlp/docker/oecc/PROGRESS_OECC_SERVER_1.3.0_LNX_64.tar.gz

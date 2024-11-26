@@ -39,7 +39,7 @@ az deployment group create --resource-group DemoResourceGroup --template-file ./
 VM_SIZE=Standard_B1s PUBLIC_IP_ADDRESS=AccessVMPublicIP create_vm AccessVM
 
 # Create OEDB VM
-VM_IMAGE=OpenEdge-12.6.0
+VM_IMAGE=OpenEdge-12.8.0
 create_vm OEDB ./custom-data.db
 
 az vm show --resource-group $RESOURCE_GROUP --name OEDB --show-details > $TEMP/output.json

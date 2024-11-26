@@ -4,7 +4,7 @@
 * Windows machine (host machine)
 * VirtualBox 6.1
 * Vagrant
-* Vagrant box with openedge-12.6.0 (see openedge-12.6.0 demo for instructions)
+* Vagrant box with openedge-12.8.0 (see openedge-12.8.0 demo for instructions)
 * LoadMaster environment configured with access to the RESTful API
     * API key
 * lm_apikey.txt: Text file with API key for LoadMaster 
@@ -12,7 +12,7 @@
 Note: If running on a Linux machine, you can change the synced_folder for /files to point a Linux folder instead of c:/files.
 
 ## Steps
-0. Run demo openedge-12.6.0 to create a Vagrant box for OpenEdge 12.6.
+0. Run demo openedge-12.8.0 to create a Vagrant box for OpenEdge 12.8.
 
 1. Configure Virtual Services and SubVSs in LoadMaster to demonstrate Blue/Green deployment.
 
@@ -24,7 +24,7 @@ Note: If running on a Linux machine, you can change the synced_folder for /files
 git clone https://github.com/progress/openedge-demos.git
 ~~~
 
-4. Change to folder openedge-demos/openedge-12.6.0:
+4. Change to folder openedge-demos/openedge-12.8.0:
 ~~~
 cd openedge-demos/loadmaster
 ~~~

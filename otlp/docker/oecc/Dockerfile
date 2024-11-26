@@ -2,7 +2,7 @@ FROM ubuntu:focal
 # FROM centos:7
 
 RUN mkdir -p /usr/oecc /oecc/data/conf
-ADD ./PROGRESS_OECC_SERVER_1.2.0_LNX_64.tar.gz /usr/oecc
+ADD ./PROGRESS_OECC_SERVER_1.3.0_LNX_64.tar.gz /usr/oecc
 COPY ./start.sh /usr/oecc
 COPY db-config.json firstuser-config.json /oecc/data/conf/
 COPY server-config.json /usr/oecc/conf/

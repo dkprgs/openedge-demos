@@ -23,6 +23,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "install_openedge",
     type: "shell",
     path: "../scripts/install_openedge.sh",
-    args: "12.6"
+    args: "12.8"
 
 end

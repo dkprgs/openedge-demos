@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "install_openedge",
     type: "shell",
     path: "../scripts/install_openedge.sh",
-    args: "12.6"
+    args: "12.8"
 
   config.vm.provision "create_sports2020",
     type: "shell",
@@ -53,9 +53,9 @@ Vagrant.configure("2") do |config|
     inline: <<-SHELL
     # set -x
     cd /vagrant/docker
-    if [ ! -f oecc/PROGRESS_OECC_SERVER_1.2.0_LNX_64.tar.gz ]
+    if [ ! -f oecc/PROGRESS_OECC_SERVER_1.3.0_LNX_64.tar.gz ]
     then
-      cp /files/PROGRESS_OECC_SERVER_1.2.0_LNX_64.tar.gz oecc
+      cp /files/PROGRESS_OECC_SERVER_1.3.0_LNX_64.tar.gz oecc
     fi  
     docker-compose up -d 
   SHELL

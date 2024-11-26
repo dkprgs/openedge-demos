@@ -4,7 +4,7 @@
 if [ "$1" == "" ]
 then
   echo "Usage: $0 <version>"
-  echo "Example: $0 12.6"
+  echo "Example: $0 12.8"
   exit
 fi
 

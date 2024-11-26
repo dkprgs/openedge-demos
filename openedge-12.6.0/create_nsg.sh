@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RESOURCE_GROUP=DemoResourceGroup
-NAME=OpenEdge-12.6.0
+NAME=OpenEdge-12.8.0
 TEMP=/tmp
 
 if az network nsg show --resource-group $RESOURCE_GROUP --name ${NAME}-nsg > $TEMP/output.json 2> /dev/null
